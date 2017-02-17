@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+        <meta name="full-screen" content="yes">
+        <link rel="stylesheet" href="./dest/css/app.css">
+    </head>
+    <body>
+        <nav class="nvaigation" id="navigation">
+            <ul class="nav-operate">
+                <li id="prev">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </li>
+                <li id="next">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </li>
+                <li id="style">
+                    <i class="fa fa-bullseye" aria-hidden="true"></i>
+                    <div class="menus">
+                        <div val="1">1</div>
+                        <div val="2">2</div>
+                        <div val="3">3</div>
+                    </div>
+                </li>
+                
+                <li id="color">
+                    <i class="fa fa-eyedropper" aria-hidden="true"></i>
+                    <div class="menus">
+                        <div val="red" class="red-bac"></div>
+                        <div val="green" class="green-bac"></div>
+                        <div val="black" class="black-back"></div>
+                    </div>
+                </li>
+                <li id="more">
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    <div class="menus">
+                        <div id="previewBtn">preview</div>
+                        <div val="green">green</div>
+                        <div val="black">black</div>
+                    </div>
+                </li>
+                
+            </ul>
+        </nav>
+        <div class="back-images-container" id="back-images-container">
+            <img id="previous-image" src="" alt="">
+            <img id="next-image" src="" alt="">
+        </div>
+        
+        <canvas id="canvas"></canvas>
+        <div class="preview-section" id="preview-section">
+            <div class="gif-container">
+                <img id="gif-image" src="" alt="">
+            </div>
+        </div>
+        <script src="./dest/js/dist/gif.js"></script>
+       
+        <script src="./dest/js/app.js"></script>
+    </body>
+</html>

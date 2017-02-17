@@ -1,0 +1,105 @@
+@import './parts/reset'; 
+@import '../../node_modules/font-awesome/scss/font-awesome';
+html{
+    height: 100%;
+    body{
+        height: 100%;
+    }
+    font-size: 5vw;
+}
+
+.back-images-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        &#previous-image{
+            opacity: .3;
+        }
+        &#next-image{
+            opacity: .4
+        }
+    }
+}
+
+
+#canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0);
+}
+
+.nvaigation{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    .nav-operate{
+        display: flex;
+        box-shadow: 0px -1px 3px rgba(0,0,0,.2);
+        li{
+            position: relative;
+            text-align: center;
+            padding: 15px;
+            flex: 1;
+            .fa{
+                color: #2F7AC6;
+                font-size: 1.2rem;
+            }
+            &:hover{
+                .menus{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            .menus{
+                background-color: #fff; 
+                padding: 10px;
+                text-align: center;
+                width: 100px;
+                visibility: hidden;
+                position: absolute;
+                bottom: 40px;
+                left: 0;
+                transition: all .3s;
+                border-radius: .1rem;
+                box-shadow: 1px 1px 10px rgba(0,0,0,.2);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.preview-section{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.6);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    transition: all .3s;
+    .gif-container{
+        position: absolute;
+        width: 50%;
+        min-height: 20%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+        #gif-image{
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+    }
+}
